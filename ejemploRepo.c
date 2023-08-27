@@ -2,6 +2,28 @@
 #include <stdlib.h>
 #include <time.h>
 
+void inversion (int* a, int* b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void ordenamientoBurbuja(int arr[], int n)
+{
+    for(int i = 0; i < n - 1; i++)
+    {
+        for(int j = 0; j < n - i; j++)
+        {
+            printf("Comparando %d con %d: \n", arr[j], arr[j + 1]);
+            if(arr[j] > arr[j + 1])
+            {
+                inversion(&arr[j], &arr[j + 1]);
+            }
+        }
+    }
+}
+
 int main()
 {
     srand(time(NULL));
