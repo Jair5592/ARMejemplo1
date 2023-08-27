@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 
+void inversion (int* a, int* b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
 int main()
 {
     srand(time(NULL));
