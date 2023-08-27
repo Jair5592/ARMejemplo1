@@ -51,10 +51,12 @@ int main()
     }
     printf("\n");
 
+    int n = sizeof(numerosBurbuja) / sizeof(numerosBurbuja[0]);
+
     printf("Ordenamiento burbuja: \n");
     clock_t inicioBurbuja = clock();
     //Aquí se ejecutará el algoritmo burbuja.
-
+    ordenamientoBurbuja(numerosBurbuja, n);
     clock_t finBurbuja = clock();
     double tiempoBurbuja = (double)(finBurbuja - inicioBurbuja) / CLOCKS_PER_SEC;
 
