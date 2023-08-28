@@ -97,5 +97,7 @@ int main()
     }
     printf("\nTiempo de ejecucion de insercion: %f segundos \n", tiempoInsercion);
 
+    printf("Nuevo cambio realizado");
+
     return 0;
 }
