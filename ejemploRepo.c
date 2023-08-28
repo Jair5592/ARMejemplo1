@@ -24,6 +24,22 @@ void ordenamientoBurbuja(int arr[], int n)
     }
 }
 
+void ordenamientoInsercion(int arr[], int n)
+{
+    for(int i = 1; i < n; i++)
+    {
+        int valorActual = arr[i];
+        int j = i - 1;
+        while(j >= 0 && arr[j] > valorActual)
+        {
+            printf("Comparando %d con %d \n", arr[j], valorActual);
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = valorActual;
+    }
+}
+
 int main()
 {
     srand(time(NULL));
