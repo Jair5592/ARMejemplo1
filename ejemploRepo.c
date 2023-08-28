@@ -79,9 +79,23 @@ int main()
     printf("Ordenamiento insercion: \n");
     clock_t inicioInsercion = clock();
     //Aquí se ejecutará el algoritmo insercion.
-
+    ordenamientoInsercion(numerosInsercion, n);
     clock_t finInsercion = clock();
     double tiempoInsercion = (double)(finInsercion - inicioInsercion) / CLOCKS_PER_SEC;
+
+    printf("\n Arreglo ordenado con burbuja: ");
+    for(int i = 1; i < 100; i++)
+    {
+        printf("%d", numerosBurbuja[i]);
+    }
+    printf("Tiempo de ejecucion de burbuja: %f segundos \n", tiempoBurbuja);
+
+    printf("\n Arreglo ordenado con insercion: ");
+    for(int i = 1; i < 100; i++)
+    {
+        printf("%d", numerosInsercion[i]);
+    }
+    printf("Tiempo de ejecucion de insercion: %f segundos \n", tiempoInsercion);
 
     return 0;
 }
